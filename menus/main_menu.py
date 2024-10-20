@@ -4,6 +4,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from utils import fmt, clear
+from settings import settings
 
 def display_ascii_art():
 
@@ -33,30 +34,6 @@ def new_game():
 def load_game():
   clear()
   print(fmt.dim_green("Loading saved game..."))
-
-def settings():
-  clear()
-  print(fmt.br_red("\nSettings Menu\n"))
-  print(fmt.yellow("1. Audio"))
-  print(fmt.yellow("2. Display"))
-  print(fmt.yellow("3. Key Bindings"))
-  print(fmt.yellow("4. Back to Main Menu"))
-
-  actions = {
-      "1": adjust_audio,
-      "2": adjust_display,
-      "3": main_menu
-  }
-
-  choice = input(fmt.white("\Enter your choice: "))
-  action = actions.get(choice)
-
-  if action:
-      action()
-  else:
-      print(fmt.red("Invalid choice. Please try again."))
-      clear()
-      settings()
 
 def quit_game():
   clear()
