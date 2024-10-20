@@ -32,6 +32,11 @@ class Formatter:
   def normal(self,text):
     print(f"{Style.NORMAL}{text}{Style.RESET_ALL}")
 
+  def br_yellow(self,text):
+    print(f"{Fore.YELLOW}{Style.BRIGHT}{text}{Style.RESET_ALL}")
+
+  def br_red(self,text):
+    print(f"{Fore.RED}{Style.BRIGHT}{text}{Style.RESET_ALL}")
 
 
 # If colored backgrounds are wanted later, just use Back.RED etc.

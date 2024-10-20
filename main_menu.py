@@ -13,7 +13,7 @@ def display_ascii_art():
 #      print("File opened successfully.")
       art = file.read()
 #      print("File read successfully.")
-      fmt.yellow(fmt.bright(art))
+      fmt.yellow(art)
 
   except FileNotFoundError:
     print(f"Error: Could not find '{ascii_art_path}'.")
@@ -28,10 +28,11 @@ def main_menu():
 
   display_ascii_art()
   fmt.red("The Sands of Xaldrithar thirst for blood. Will it be yours?")
-  fmt.white("1. New  Game")
+
+  fmt.white("\n\n1. New  Game")
   fmt.green("2. Load Game")
-  fmt.magenta(fmt.dim("3. Settings"))
-  fmt.cyan("4. Quit")
+  fmt.br_yellow("3. Settings")
+  fmt.cyan("4. Quit\n")
 
 
 if __name__ == "__main__":
