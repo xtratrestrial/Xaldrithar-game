@@ -5,7 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from utils import fmt, clear
 from settings import settings
-
+from chargen import character_creation
 def display_ascii_art():
 
   ascii_art_path = "assets/ascii_splash.txt"
@@ -29,7 +29,7 @@ def display_ascii_art():
 
 def new_game():
   clear()
-  print(fmt.dim_green("Starting new game..."))
+  character_creation()
 
 def load_game():
   clear()
@@ -41,6 +41,8 @@ def quit_game():
   exit()
 
 def main_menu():
+
+  clear()
 
   display_ascii_art()
 

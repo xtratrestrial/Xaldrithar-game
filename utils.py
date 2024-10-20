@@ -45,6 +45,12 @@ class Formatter:
   def dim_green(self,text):
     return f"{Fore.GREEN}{Style.DIM}{text}{Style.RESET_ALL}"
 
+  def dim_yellow(self,text):
+    return f"{Fore.YELLOW}{Style.DIM}{text}{Style.RESET_ALL}"
+
+  def dim_blue(self,text):
+    return f"{Fore.BLUE}{Style.DIM}{text}{Style.RESET_ALL}"
+
 
 # If colored backgrounds are wanted later, just use Back.RED etc.
 

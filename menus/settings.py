@@ -13,7 +13,8 @@ def settings():
   actions = {
       "1": adjust_audio,
       "2": adjust_display,
-      "3": return_to_main_menu
+      "3": adjust_key_bindings,
+      "4": return_to_main_menu
   }
 
   choice = input(fmt.white("Enter your choice: "))
