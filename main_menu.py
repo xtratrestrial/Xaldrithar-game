@@ -1,5 +1,7 @@
 import os
 
+from utils import fmt
+
 def display_ascii_art():
 
   ascii_art_path = "assets/ascii_splash.txt"
@@ -8,10 +10,10 @@ def display_ascii_art():
   
   try:
     with open(ascii_art_path, "r") as file:
-      print("File opened successfully.")
+#      print("File opened successfully.")
       art = file.read()
-      print("File read successfully.")
-      print(art)
+#      print("File read successfully.")
+      fmt.yellow(fmt.bright(art))
 
   except FileNotFoundError:
     print(f"Error: Could not find '{ascii_art_path}'.")
@@ -25,11 +27,11 @@ def display_ascii_art():
 def main_menu():
 
   display_ascii_art()
-  print("\n\033[31mThe Sands of Xaldrithar thirst for blood. Will it be yours?")
-  print("1. New  Game")
-  print("2. Load Game")
-  print("3. Settings")
-  print("4. Quit")
+  fmt.red("The Sands of Xaldrithar thirst for blood. Will it be yours?")
+  fmt.white("1. New  Game")
+  fmt.green("2. Load Game")
+  fmt.magenta(fmt.dim("3. Settings"))
+  fmt.cyan("4. Quit")
 
 
 if __name__ == "__main__":
