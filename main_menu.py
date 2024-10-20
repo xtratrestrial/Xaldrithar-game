@@ -17,7 +17,7 @@ def display_ascii_art():
     print(f"Error: Could not find '{ascii_art_path}'.")
 
   except PermissionError:
-    print(f"Error: No permission to read '{asci_art_path}'.")
+    print(f"Error: No permission to read '{ascii_art_path}'.")
   except Exception as e:
     print(f"An unexpected error occurred: {e}")
 
@@ -30,3 +30,7 @@ def main_menu():
   print("2. Load Game")
   print("3. Settings")
   print("4. Quit")
+
+
+if __name__ == "__main__":
+    main_menu()
