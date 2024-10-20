@@ -13,7 +13,7 @@ def settings():
   actions = {
       "1": adjust_audio,
       "2": adjust_display,
-      "3": main_menu
+      "3": return_to_main_menu
   }
 
   choice = input(fmt.white("Enter your choice: "))
@@ -42,7 +42,7 @@ def adjust_key_bindings():
   time.sleep(2)
   settings()
 
-def main_menu():
+def return_to_main_menu():
   print("Returning to main menu...")
   from menus.main_menu import main_menu
   main_menu()
