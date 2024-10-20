@@ -1,4 +1,6 @@
 from utils import fmt, clear
+import time
+
 
 def settings():
   clear()
@@ -21,23 +23,29 @@ def settings():
       action()
   else:
       print(fmt.red("Invalid choice. Please try again."))
+      time.sleep(2)
       clear()
       settings()
 
-def adjust_audio:
-  print(fmt.yellow("Need to add Audio Settings Menu.")
+def adjust_audio():
+  print(fmt.br_red("Need to add Audio Settings Menu."))
+  time.sleep(2)
   settings()
 
-def adjust_display:
-  print(fmt.yellow("Need to add Display Settings")
+def adjust_display():
+  print(fmt.red("Need to add Display Settings"))
+  time.sleep(2)
   settings()
 
 def adjust_key_bindings():
-  print(fmt.yellow("Need to add Adjusting key bindings...")
+  print(fmt.red("Need to add Adjusting key bindings..."))
+  time.sleep(2)
   settings()
 
-def back_to_main_menu():
-  from main_menu import main_menu
+def main_menu():
+  print("Returning to main menu...")
+  from menus.main_menu import main_menu
   main_menu()
+  print("Back to main menu executed.")
 
 
