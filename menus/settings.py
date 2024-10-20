@@ -14,7 +14,7 @@ def settings():
       "3": main_menu
   }
 
-  choice = input(fmt.white("\Enter your choice: "))
+  choice = input(fmt.white("Enter your choice: "))
   action = actions.get(choice)
 
   if action:
