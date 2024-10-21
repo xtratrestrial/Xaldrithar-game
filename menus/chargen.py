@@ -1,7 +1,7 @@
 import os
 import time
 import yaml
-from utils import fmt, clear
+from utils.utils import fmt, clear
 
 def character_creation():
   clear()

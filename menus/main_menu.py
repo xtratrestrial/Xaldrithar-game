@@ -3,7 +3,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from utils import fmt, clear
+from utils.utils import fmt, clear
 from settings import settings
 from chargen import character_creation
 def display_ascii_art():
