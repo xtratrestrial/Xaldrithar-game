@@ -1,0 +1,48 @@
+races:
+  stygian:
+    name: "Stygian"
+    ability_bonus:
+      fixed: "Wisdom"
+      choice: "Any"
+    skill_bonus:
+      choose: 2              # Player can choose 2 skills from the list
+      default_bonus: 20      # Default bonus for the chosen skills
+      options:
+        - "Divinity"
+        - "Perception"
+        - "Athletics"
+        - "Stealth"
+        - "Survival"
+        - "Nature"
+        - "Medicine"
+    racial_features:
+      - name: "Mystical Insight"
+        flavor_text: "Stygian characters are known for their deep connection with ancient knowledge, granting a bonus to checks related to deciphering magical texts or identifying relics."
+        description: "Once per day, the Stygian can cast Detect Magic"
+        mechanics:
+          spell: "Detect Magic"
+          frequency: 1/Day          # Grants +10% bonus to Lore checks when dealing with magical texts or relics
+
+  northmen:
+    name: "Northmen"
+    ability_bonus:
+      fixed: "Constitution"
+      choice: "Any"
+    skill_bonus:
+      choose: 2
+      default_bonus: 20
+      options:
+        - "Athletics"
+        - "Crafting"
+        - "Intimidation"
+        - "Nature"
+        - "Performance"
+        - "Primal Magic"
+        - "Survival"
+    racial_features:
+      - name: "Heart of the Mountain"
+        flavor_text: "The Northmen are forged by the unforgiving peaks, where only the strong survive."
+        description: " Once per day, the Northman can cast Heroism on themselves, granting themselves temporary courage and immunity to fear, along with temporary hit points equal to 5 for 1 minute."
+        mechanics:
+          spell: "Heroism"
+          frequency: 1/day
